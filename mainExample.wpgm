@@ -1,18 +1,17 @@
 import wollok.game.*
 
-import example.pepita
+import example.*
 
-program PepitaGame {
-	game.title("Pepita")
-	game.height(10)
-	game.width(10)
+program oceano {
+  game.cellSize(64)
+  game.width(12)
+  game.height(7)
 
-	// add assets in asset folder, for example, for the background
-  // game.boardGround("fondo2.jpg")
+  game.boardGround("oceanopixel.jpg")
 
-	//
+  game.addVisualCharacter(barco)
 
-	game.showAttributes(pepita) //Debug
+  game.title("Juego del Barco Mortal")
 
-	game.start()
+  game.start()
 }
