@@ -1,4 +1,5 @@
 object barco{
-  var property image = "barco2.jpg"
-  var property position = game.origin() 
+  var property image = "barco3.png"
+  var property position = game.origin()
+
 }
