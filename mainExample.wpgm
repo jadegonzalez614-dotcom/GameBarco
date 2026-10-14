@@ -25,7 +25,7 @@ program juego {
   game.title("Teseo y el Minotauro")
   game.width(15)
   game.height(10)
-  game.cellSize(30)
+  game.cellSize(64)
 
   game.boardGround("fondogriegosintexto.jpg")
 
@@ -33,5 +33,7 @@ program juego {
 
   keyboard.enter().onPressDo({historia.avanzarConLaHistoria()}) // La tecla ENTER para avanzar en la historia
 
+  game.boardGround("oceanopixel.jpg")
+  
   game.start()
 }

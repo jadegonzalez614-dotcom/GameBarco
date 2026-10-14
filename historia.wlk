@@ -41,6 +41,7 @@ object historia {
   method comenzarJuego() {
     game.removeVisual(self) // Quitamos el texto de la pantalla
     //Pantalla de inicio con los controles? O eso va al inicio?
+    
     game.addVisual(barco)
   }
 }
