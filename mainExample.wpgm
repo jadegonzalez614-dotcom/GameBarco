@@ -13,6 +13,7 @@ import historia.*
 
   game.addVisualCharacter(barco)
 
+
   game.title("Juego del Barco Mortal")
 
   game.start()
