@@ -18,30 +18,19 @@ import historia.*
   game.start()
 }
 
-
-program history {
-  game.width(15)
-  game.height(10)
-  game.cellSize(64)
-
-  game.boardGround("fondogriegosintexto.jpg")
-
-  game.addVisual(historia)
-  game.start()
-}*/
+*/
 
 program juego {
   game.title("Teseo y el Minotauro")
   game.width(15)
   game.height(10)
-  game.cellSize(64)
+  game.cellSize(30)
 
   game.boardGround("fondogriegosintexto.jpg")
 
   game.addVisual(historia)
 
-  // La tecla ENTER para avanzar en la historia
-  keyboard.enter().onPressDo({historia.avanzarConLaHistoria() })
+  keyboard.enter().onPressDo({historia.avanzarConLaHistoria()}) // La tecla ENTER para avanzar en la historia
 
   game.start()
 }

@@ -24,6 +24,7 @@ object historia {
   ]
 
 
+
   var property position = game.center() // Posiciona en el centro
 
   method text() = lineas.head() //Muestra la primera linea
@@ -32,8 +33,8 @@ object historia {
     if(!lineas.isEmpty()){
         lineas.remove(lineas.head()) //Va sacando de a una las lineas
     }
-    else{
-        self.comenzarJuego()
+    if(lineas.isEmpty()){     //Si esta vacia la lista empieza el juego
+        self.comenzarJuego()    
     }
   } 
 
