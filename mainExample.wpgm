@@ -1,7 +1,10 @@
 import wollok.game.*
 
-import example.*
+import barco.*
 import historia.*
+import personaje.*
+import jugar.*
+
 
 
 /*program oceano {
@@ -21,19 +24,11 @@ import historia.*
 
 */
 
+
 program juego {
-  game.title("Teseo y el Minotauro")
-  game.width(15)
-  game.height(10)
-  game.cellSize(64)
 
-  game.boardGround("fondogriegosintexto.jpg")
-
-  game.addVisual(historia)
-
-  keyboard.enter().onPressDo({historia.avanzarConLaHistoria()}) // La tecla ENTER para avanzar en la historia
-
-  game.boardGround("oceanopixel.jpg")
+  jugarJuego.iniciar()
   
   game.start()
 }
+
