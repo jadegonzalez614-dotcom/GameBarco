@@ -1,32 +1,60 @@
 import wollok.game.*
 
-import example.*
+import barco.*
 import historia.*
+import personaje.*
+import jugar.*
+import barco2.*
 
 
+<<<<<<< HEAD
 program juego {
+=======
+
+
+program jugar {
+>>>>>>> 891a48b58ecf2e39cb01618f41dfd39f09d36b7a
   game.width(15)
   game.height(10)
   game.cellSize(64)
 
+<<<<<<< HEAD
  oceano.iniciar()
  game.start()
 }
 
 
-/*
-program juego {
-  game.title("Teseo y el Minotauro")
-  game.width(15)
-  game.height(10)
-  game.cellSize(30)
+=======
+  //game.boardGround("oceanopixel.jpg")
 
-  game.boardGround("fondogriegosintexto.jpg")
+  //game.addVisualCharacter(barco)
+  barco2.iniciar()
 
-  game.addVisual(historia)
 
-  keyboard.enter().onPressDo({historia.avanzarConLaHistoria()}) // La tecla ENTER para avanzar en la historia
+
+  keyboard.w().onPressDo({ barco2.subir() })
+  keyboard.s().onPressDo({ barco2.bajar() })
+  keyboard.a().onPressDo({ barco2.izquierda() })
+  keyboard.d().onPressDo({ barco2.derecha() })
+
+
+  game.title("Juego del Barco Mortal")
 
   game.start()
 }
+
+
+
+>>>>>>> 891a48b58ecf2e39cb01618f41dfd39f09d36b7a
+/*
+program juego {
+
+  jugarJuego.iniciar()
+  
+  game.start()
+}
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> 891a48b58ecf2e39cb01618f41dfd39f09d36b7a
