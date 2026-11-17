@@ -1,3 +1,5 @@
+import historia.*
+
 object barco{
   
   var property position = game.at(0, 0)
@@ -5,11 +7,6 @@ object barco{
   method image() = "barco1.png"
 
   method iniciar() {
-    keyboard.up().onPressDo({ self.subir() })
-    keyboard.down().onPressDo({ self.bajar() })
-    keyboard.left().onPressDo({ self.moverIzquierda() })
-    keyboard.right().onPressDo({ self.moverDerecha() })
-
     game.addVisual(fondoOceano)
     game.addVisual(self)
   }
@@ -17,6 +14,7 @@ object barco{
   method terminar() {
     game.removeVisual(fondoOceano)
     game.removeVisual(self)
+
   }
 
   method subir() {
@@ -40,14 +38,14 @@ object barco{
     }
   }
 
-  method moverDerecha() {
+  method derecha() {
     const nuevaX = position.x() + 1 
     if (nuevaX <= 11) { 
       position = game.at(nuevaX, position.y())
     }
   }
 
-  method moverIzquierda() {
+  method izquierda() {
     const nuevaX = position.x() - 1
     if (nuevaX >= 0) {
       position = game.at(nuevaX, position.y())
@@ -55,13 +53,7 @@ object barco{
   }
 } // ro:agrego el barco de teseo.
 
-object oceano{
-  method iniciar(){
-    game.addVisual("oceanoplano.jpg")
-    game.addVisualCharacter(barco)
-  } // ro:agrego el oceano que tiene que pasar teseo para el proximo nivel.
 
-} 
 object fondoOceano {
   method position() = game.at(0, 0)
   
@@ -74,3 +66,4 @@ object piedra {
   var property image = "2.png"
   var property position = game.origin()  
 }
+

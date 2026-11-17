@@ -1,6 +1,9 @@
+import hilo.*
 import historia.*
 import barco.*
 import personaje.*
+import pantallas.*
+
 object jugarJuego {
   
   method iniciar() {
@@ -9,25 +12,33 @@ object jugarJuego {
     game.height(10)
     game.cellSize(64)
 
+    var personajeActual = barco
+
+    
     historia.iniciar(barco)
 
     keyboard.t().onPressDo({
-    barco.terminar()                         // Saca el barco y el fondo del océano
+    barco.terminar()                         // Saco el barco y el fondo del oceano
     
-    historia.agregarLineas(lineasParaElHilo) // Agrega las nuevas líneas
-    historia.iniciar(barco)                  // Inicia la historia pasándole el barco para que después pueda volver
+    personajeActual = personaje
+    historia.agregarLineas(lineasParaElHilo) // Agrego las nuevas lineas
+    historia.iniciar(nivelHilo)              //Siguente nivel    
     })
     
     game.boardGround("fondoDeHistoria.jpg")
 
+    //game.addVisual(menuInicio)
 
-    game.addVisual(pantallaInicio)
+    keyboard.w().onPressDo({ personajeActual.subir() })
+    keyboard.s().onPressDo({ personajeActual.bajar() })
+    keyboard.a().onPressDo({ personajeActual.izquierda() })
+    keyboard.d().onPressDo({ personajeActual.derecha() })
 
-    keyboard.e().onPressDo({
-      if (game.hasVisual(pantallaInicio)) {
-      game.removeVisual(pantallaInicio)
+    keyboard.enter().onPressDo({
+      if (game.hasVisual(historia)) {
+        historia.avanzarConLaHistoria() 
       }
     })
-
+    
   }
 }

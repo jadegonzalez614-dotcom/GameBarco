@@ -4,17 +4,27 @@ import barco.*
 import historia.*
 import personaje.*
 import jugar.*
+import barco2.*
 
 
 
-/*program oceano {
+
+program jugar {
   game.width(15)
   game.height(10)
   game.cellSize(64)
 
-  game.boardGround("oceanopixel.jpg")
+  //game.boardGround("oceanopixel.jpg")
 
-  game.addVisualCharacter(barco)
+  //game.addVisualCharacter(barco)
+  barco2.iniciar()
+
+
+
+  keyboard.w().onPressDo({ barco2.subir() })
+  keyboard.s().onPressDo({ barco2.bajar() })
+  keyboard.a().onPressDo({ barco2.izquierda() })
+  keyboard.d().onPressDo({ barco2.derecha() })
 
 
   game.title("Juego del Barco Mortal")
@@ -22,13 +32,13 @@ import jugar.*
   game.start()
 }
 
-*/
 
 
+/*
 program juego {
 
   jugarJuego.iniciar()
   
   game.start()
 }
-
+*/
