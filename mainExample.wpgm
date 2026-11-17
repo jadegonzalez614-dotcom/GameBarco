@@ -4,23 +4,17 @@ import example.*
 import historia.*
 
 
-/*program oceano {
+program juego {
   game.width(15)
   game.height(10)
   game.cellSize(64)
 
-  game.boardGround("oceanopixel.jpg")
-
-  game.addVisualCharacter(barco)
-
-
-  game.title("Juego del Barco Mortal")
-
-  game.start()
+ oceano.iniciar()
+ game.start()
 }
 
-*/
 
+/*
 program juego {
   game.title("Teseo y el Minotauro")
   game.width(15)
@@ -35,3 +29,4 @@ program juego {
 
   game.start()
 }
+*/

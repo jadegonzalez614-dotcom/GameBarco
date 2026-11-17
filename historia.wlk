@@ -1,4 +1,6 @@
-/*object paleta {
+import wollok.game.*
+import example.*
+object paleta {
   const property blanco = "FFFFFFFF"
 }
 
@@ -7,12 +9,11 @@ object historia {
   //method image() = "fondogriegosintexto.jpg"
   method text() = "Teseo a partido de Atena a Creta"
   method textColor() = paleta.blanco()    
-}*/
-
-import wollok.game.*
-import example.*
+}
 
 
+
+/*
 object historia {
 
   const lineas = [
@@ -41,6 +42,11 @@ object historia {
   method comenzarJuego() {
     game.removeVisual(self) // Quitamos el texto de la pantalla
     //Pantalla de inicio con los controles? O eso va al inicio?
-    game.addVisual(barco)
+    game.boardGround("oceanopixel.jpg")
+    game.addVisualCharacter(barco)
+    
   }
+  method position()=game.origin()
+
 }
+*/
